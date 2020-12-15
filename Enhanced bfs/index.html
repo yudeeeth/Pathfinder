@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js example</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <link rel="stylesheet" href="looks.css">
+  <script src="../p5.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <nav>
+    <button onclick="resetblank()">Reset [r]</button>
+    <button onclick="mousepane.set(0)">Place Blocks [b]</button>
+    <button onclick="mousepane.set(-1)">Delete Blocks [d]</button>
+    <button onclick="mousepane.set(1)">Pause [p]</button>
+    <button onclick="mousepane.set(2)">Place starting block [c]</button>
+    <button onclick="mousepane.set(3)">Place Ending block [g]</button>
+    <button onclick="mousepane.set(4)">BFS [s]</button>
+    <t>Speed:</t>
+    <input type="range" min="1" max="1000" value="10" class="slider" id="myRange">
+  </nav>
+  <main>
+
+  </main>
+  
+
+</body>
+
+</html>
