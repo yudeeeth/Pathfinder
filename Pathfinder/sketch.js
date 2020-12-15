@@ -1,6 +1,6 @@
 function setup(){
   //scale to set size
-  scl = 10;
+  scl = 30;
   createCanvas(ind(window.innerWidth)*scl,ind(window.innerHeight-30)*scl);
 
   h = Math.floor(height/scl);
