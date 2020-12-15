@@ -43,6 +43,9 @@ function setup(){
 
 function draw(){
   //console.log(slide.value);
+  if(scaleslider.value!= scl){
+    scaler();
+  }
   background(51);
   val = -2;
   switch(handle){
