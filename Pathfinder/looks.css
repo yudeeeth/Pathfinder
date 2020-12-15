@@ -1,0 +1,13 @@
+body{
+background-color: dimgray;
+}
+
+button,t {
+    border: 0px;
+    background-color: aqua;
+    height: 30px;
+}
+
+nav{
+    align-content: center;
+}
