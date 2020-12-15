@@ -38,7 +38,7 @@ function setup(){
   mousepane = new m();
   //slider
   slide = document.getElementById('myRange');
-
+  scaleslider = document.getElementById('myscl');
 }
 
 function draw(){
@@ -145,10 +145,10 @@ function resetblank(){
 }
 
 //helper function to get round to 10
-function ind(val){ return Math.floor(val/10); }
+function ind(val){ return Math.floor(val/scl); }
 
 //draw rect
-function d(x,y){rect(x*10,y*10,scl,scl);}
+function d(x,y){rect(x*scl,y*scl,scl,scl);}
 
 //set colors
 function setcolors(){
@@ -264,4 +264,26 @@ function fit(x,y){
     return 1;
   return 0;
   //node[buff.x+1][buff.y].code!=0 && node[buff.x+1][buff.y].code!=3
+}
+
+//scale function
+function scaler(){
+  resetblank();
+  scl = scaleslider.value;
+  createCanvas(ind(window.innerWidth)*scl,ind(window.innerHeight-30)*scl);
+
+  h = Math.floor(height/scl);
+  w = Math.floor(width/scl);
+  //holds the graph
+  node = new Array(w);
+  for(i=0;i<w;i++){
+    temp = new Array(h);
+    node[i]=temp;
+  }
+  //make graph empty
+  for(i = 0;i<w;i++){
+    for(j=0;j<h;j++){
+      node[i][j]= new nod();
+    }
+  }
 }
